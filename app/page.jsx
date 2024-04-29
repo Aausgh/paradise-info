@@ -1,7 +1,10 @@
 
+import AnalyticsChart from '@/components/AnalyticsChart';
 import Card from '@/components/Card'
 
 import ChatCard from '@/components/ChatCard';
+import ProfitChart from '@/components/ProfitChart';
+import RevenueChart from '@/components/RevenueChart';
 import Table from '@/components/Table';
 import { Chats, Info } from '@/constants/constants'
 import React from 'react'
@@ -20,6 +23,7 @@ const Home = () => {
             </div>
 
             <div className='mt-8 grid grid-cols-12 gap-4 md:gap-6 xl:gap-8'>
+
                 {/* Revenue & Sales */}
                 <div className='col-span-12 xl:col-span-8 rounded-md bg-white px-5 py-7 shadow-md'>
 
@@ -40,6 +44,7 @@ const Home = () => {
                                     </p>
                                 </div>
                             </div>
+
                             <div className='flex min-w-48'>
                                 <span className="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-[#80caee]">
                                     <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-[#80caee]"></span>
@@ -64,6 +69,10 @@ const Home = () => {
                                 <button className='rounded-md hover:bg-white px-3 py-1 text-sm font-medium hover:shadow-md'>Month</button>
                             </div>
                         </div>
+                    </div>
+
+                    <div className=' mt-6 w-[96%] h-64 lg:h-80'>
+                        <RevenueChart />
                     </div>
                 </div>
 
@@ -90,8 +99,24 @@ const Home = () => {
                                 <FaAngleDown />
                             </span>
                         </div>
+                    </div>
 
+                    <div className='flex gap-4' >
 
+                        <p className='flex items-center gap-2'>
+                            <span className="block h-2.5 w-2.5 rounded-full bg-[#3c51e1]"></span>
+                            Sales
+                        </p>
+
+                        <p className='flex items-center gap-2'>
+                            <span className="block h-2.5 w-2.5 rounded-full bg-[#80caee]"></span>
+                            Revenue
+                        </p>
+
+                    </div>
+
+                    <div className=' mt-6 w-[100%] h-72 lg:h-80'>
+                        <ProfitChart />
                     </div>
                 </div>
 
@@ -124,6 +149,49 @@ const Home = () => {
                                     <FaAngleDown />
                                 </span>
                             </div>
+                        </div>
+                    </div>
+
+                    <div className='flex items-center justify-center mt-6 mb-2 w-[100%] h-72 lg:h-80'>
+                        <AnalyticsChart />
+                    </div>
+
+                    <div className='grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-x-12 gap-y-3'>
+
+                        <div className='w-full flex items-center  gap-2'>
+                            <span className="block h-3 w-3 rounded-full bg-[#3c51e1]"></span>
+
+                            <p className="flex w-full justify-between text-sm font-medium text-black">
+                                <span> Desktop </span>
+                                <span> 65% </span>
+                            </p>
+                        </div>
+
+                        <div className='w-full  flex items-center gap-2'>
+                            <span className="block h-3 w-3 rounded-full bg-[#6477f2]"></span>
+
+                            <p className="flex w-full justify-between text-sm font-medium text-black">
+                                <span> Tablet </span>
+                                <span> 34% </span>
+                            </p>
+                        </div>
+
+                        <div className='w-full  flex items-center  gap-2'>
+                            <span className="block h-3 w-3 rounded-full bg-[#8ed0ee]"></span>
+
+                            <p className="flex w-full justify-between text-sm font-medium text-black">
+                                <span> Mobile </span>
+                                <span> 12% </span>
+                            </p>
+                        </div>
+
+                        <div className='w-full flex items-center  gap-2'>
+                            <span className="block h-3 w-3 rounded-full bg-[#0fadcf]"></span>
+
+                            <p className="flex w-full justify-between text-sm font-medium text-black">
+                                <span> Unknown </span>
+                                <span> 56% </span>
+                            </p>
                         </div>
                     </div>
                 </div>
