@@ -19,6 +19,11 @@ import { BsCart2 } from "react-icons/bs";
 import { CgShoppingBag } from "react-icons/cg";
 import { HiOutlineUsers } from "react-icons/hi2";
 
+import { FcGoogle } from "react-icons/fc";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { FaFacebook, FaGithub } from "react-icons/fa6";
+import { TiSocialVimeoCircular } from "react-icons/ti";
+
 export const Menu = [
     {
         id: 1,
@@ -265,5 +270,53 @@ export const Info = [
         value: '3.456',
         percent: 0.95,
         pIcon: <BiDownArrowAlt size={20} />
+    }
+]
+
+export const TableInfo = [
+    {
+        id: 1,
+        icon: <FcGoogle size={40} />,
+        source: 'Google',
+        visitors: 3.5,
+        revenues: '5,768',
+        sales: 590,
+        conversion: 4.8
+    },
+    {
+        id: 2,
+        icon: <AiFillTwitterCircle color="#2a97f0" size={40} />,
+        source: 'Twitter',
+        visitors: 2.2,
+        revenues: '4,635',
+        sales: 467,
+        conversion: 4.3
+    },
+    {
+        id: 3,
+        icon: <FaGithub size={40} />,
+        source: 'Github',
+        visitors: 2.1,
+        revenues: '4,290',
+        sales: 420,
+        conversion: 3.7
+    },
+    {
+        id: 4,
+        icon: <TiSocialVimeoCircular size={40} color="#4cc1fe" />,
+        source: 'Vimeo',
+        visitors: 1.5,
+        revenues: '3,580',
+        sales: 389,
+        conversion: 2.5
+    },
+    {
+        id: 5,
+        icon: <FaFacebook size={40} color="#3063c9" />,
+        source: 'Facebook',
+        visitors: 3.5,
+        revenues: '6,768',
+        sales: 390,
+        conversion: 4.2
     }
 ]

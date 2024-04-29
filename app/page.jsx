@@ -1,8 +1,10 @@
 
 
 import Card from '@/components/Card'
-import { Info } from '@/constants/constants'
+import Table from '@/components/Table';
+import { Info, TableInfo } from '@/constants/constants'
 import React from 'react'
+import { FaAngleDown } from 'react-icons/fa6';
 
 const Home = () => {
     return (
@@ -14,6 +16,137 @@ const Home = () => {
                     <Card key={i.id} i={i} />
                 ))}
 
+            </div>
+
+            <div className='mt-4 grid grid-cols-12 gap-4'>
+
+                {/* Revenue & Sales */}
+                <div className='col-span-12 xl:col-span-8 rounded-md bg-white px-5 py-7 shadow-md'>
+
+                    <div className='flex flex-wrap items-start justify-between '>
+                        <div className='flex flex-wrap gap-4'>
+                            <div className='flex min-w-48'>
+                                <span className="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-[#3c51e1]">
+                                    <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-[#3c51e1]"></span>
+                                </span>
+
+                                <div className="w-full">
+                                    <p className="font-semibold text-[#3c51e1]">
+                                        Total Revenue
+                                    </p>
+
+                                    <p class="text-sm font-medium">
+                                        12.04.2022 - 12.05.2022
+                                    </p>
+                                </div>
+                            </div>
+                            <div className='flex min-w-48'>
+                                <span className="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-[#80caee]">
+                                    <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-[#80caee]"></span>
+                                </span>
+
+                                <div className="w-full">
+                                    <p className="font-semibold text-[#80caee]">
+                                        Total Sales
+                                    </p>
+
+                                    <p class="text-sm font-medium">
+                                        12.04.2022 - 12.05.2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='flex justify-end'>
+                            <div className='flex items-center rounded-md bg-[#f5f6fc] p-1 gap-2'>
+                                <button className='rounded-md bg-white px-3 py-1 text-sm font-medium shadow-md'>Day</button>
+                                <button className='rounded-md hover:bg-white px-3 py-1 text-sm font-medium hover:shadow-md'>Week</button>
+                                <button className='rounded-md hover:bg-white px-3 py-1 text-sm font-medium hover:shadow-md'>Month</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                {/* Profit This Week */}
+                <div className='col-span-12 xl:col-span-4 rounded-md bg-white px-5 py-7 shadow-md'>
+                    <div className='mb-4 flex justify-between gap-4'>
+                        <h1 className='text-xl font-semibold text-black'>
+                            Profit this week
+                        </h1>
+
+                        <div class="relative z-20 inline-block text-gray-600">
+                            <select name="#" id="#" className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8  text-sm font-medium outline-none">
+                                <option value="">
+                                    This Week
+                                </option>
+
+                                <option value="">
+                                    Last Week
+                                </option>
+                            </select>
+
+                            <span className="absolute right-3 top-1/2 z-10 -translate-y-1/2">
+                                <FaAngleDown />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                {/* Visitors Analytics */}
+                <div className='col-span-12 xl:col-span-5 rounded-md bg-white px-5 py-7 shadow-md'>
+                    <div className="mb-3 justify-between gap-4 sm:flex">
+
+                        <h1 className="text-xl font-semibold text-black">
+                            Visitors Analytics
+                        </h1>
+
+                        <div>
+                            <div className="relative z-20 inline-block text-gray-600">
+                                <select
+                                    name=""
+                                    id=""
+                                    className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none"
+                                >
+                                    <option value="" className="dark:bg-boxdark">
+                                        Monthly
+                                    </option>
+
+                                    <option value="" className="dark:bg-boxdark">
+                                        Yearly
+                                    </option>
+                                </select>
+
+                                <span className="absolute right-3 top-1/2 z-10 -translate-y-1/2">
+                                    <FaAngleDown />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                {/* Region Labels */}
+                <div className='col-span-12 xl:col-span-7 rounded-md bg-white px-5 py-7 shadow-md'>
+                    <h1 className='mb-2 text-xl font-semibold text-black'>
+                        Region labels
+                    </h1>
+
+                    <div></div>
+                </div>
+
+
+                {/* Top Channels */}
+                <div className='col-span-12 xl:col-span-8 rounded-md bg-white px-5 py-7 shadow-md'>
+
+                    <h1 className='mb-6 text-xl font-semibold text-black'>
+                        Top Channels
+                    </h1>
+
+                    <Table />
+                </div>
             </div>
         </div>
     )
