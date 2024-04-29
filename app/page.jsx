@@ -7,8 +7,10 @@ import ProfitChart from '@/components/ProfitChart';
 import RevenueChart from '@/components/RevenueChart';
 import Table from '@/components/Table';
 import { Chats, Info } from '@/constants/constants'
+import Image from 'next/image';
 import React from 'react'
 import { FaAngleDown } from 'react-icons/fa6';
+import map from '@/public/map.svg'
 
 const Home = () => {
     return (
@@ -28,7 +30,8 @@ const Home = () => {
                 <div className='col-span-12 xl:col-span-8 rounded-md bg-white px-5 py-7 shadow-md'>
 
                     <div className='flex flex-wrap items-start justify-between '>
-                        <div className='flex flex-wrap gap-4'>
+                        <div className='flex flex-col flex-wrap md:flex-row gap-4'>
+
                             <div className='flex min-w-48'>
                                 <span className="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-[#3c51e1]">
                                     <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-[#3c51e1]"></span>
@@ -115,7 +118,7 @@ const Home = () => {
 
                     </div>
 
-                    <div className=' mt-6 w-[100%] h-72 lg:h-80'>
+                    <div className=' mt-8 w-[100%] h-72 lg:h-80'>
                         <ProfitChart />
                     </div>
                 </div>
@@ -203,7 +206,7 @@ const Home = () => {
                         Region labels
                     </h1>
 
-                    <div></div>
+                    <Image src={map} alt='map' className='mx-auto w-[70%] h-90' />
                 </div>
 
 
