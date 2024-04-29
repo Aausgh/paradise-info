@@ -58,12 +58,14 @@ const ProfitChart = () => {
                     tickSize={0}
                     tickMargin={10}
                     ticks={[0, 20, 40, 60, 80, 100]}
+                    axisLine={false}
                 />
                 <XAxis
                     dataKey="name"
                     fontSize={10}
                     tickSize={0}
                     tickMargin={10}
+                    axisLine={false}
 
                 />
                 <CartesianGrid vertical={false} />

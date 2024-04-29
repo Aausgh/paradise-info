@@ -1,8 +1,8 @@
 "use client"
 
 import {
-    Line,
-    LineChart,
+    Area,
+    AreaChart,
     ResponsiveContainer,
     XAxis,
     YAxis,
@@ -76,12 +76,13 @@ const Revenue = [
 const RevenueChart = () => {
     return (
         <ResponsiveContainer width="100%" height="100%">
-            <LineChart width={500} height={400} data={Revenue}>
+            <AreaChart width={500} height={400} data={Revenue}>
                 <YAxis
                     fontSize={10}
                     tickSize={0}
                     tickMargin={10}
                     ticks={[0, 20, 40, 60, 80, 100]}
+                    axisLine={false}
                 />
 
                 <XAxis
@@ -90,18 +91,9 @@ const RevenueChart = () => {
                     tickSize={0}
                     tickMargin={20}
                 />
-                <CartesianGrid />
+                <CartesianGrid strokeDasharray="1" />
                 <Tooltip content={CustomTooltip} />
-
-                <Line
-                    dataKey="product1"
-                    stroke="#5e79e4"
-                    strokeWidth={3}
-                    fill="#cae9f9"
-                    dot={{ r: 4 }}
-                    activeDot={{ r: 10 }}
-                />
-                <Line
+                <Area
                     dataKey="product2"
                     stroke="#80caee"
                     strokeWidth={3}
@@ -109,7 +101,16 @@ const RevenueChart = () => {
                     dot={{ r: 4 }}
                     activeDot={{ r: 10 }}
                 />
-            </LineChart>
+                <Area
+                    dataKey="product1"
+                    stroke="#5e79e4"
+                    strokeWidth={3}
+                    fill="#b2caf3"
+                    dot={{ r: 4 }}
+                    activeDot={{ r: 10 }}
+                />
+
+            </AreaChart>
         </ResponsiveContainer>
     )
 }
