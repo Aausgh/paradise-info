@@ -1,9 +1,11 @@
 import { RxDashboard } from "react-icons/rx";
-import { FaRegCalendarDays } from "react-icons/fa6";
+import { LuCalendarDays } from "react-icons/lu";
 import { FiUser } from "react-icons/fi";
 import { FaList } from "react-icons/fa";
+import { CiBoxList } from "react-icons/ci";
 import { BsTable } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
+import { FaWpforms } from "react-icons/fa";
 
 import { MdOutlineEmail } from "react-icons/md";
 import { FiDownload } from "react-icons/fi";
@@ -14,6 +16,7 @@ import { HiMiniArrowRightEndOnRectangle } from "react-icons/hi2";
 
 export const Menu = [
     {
+        id: 1,
         title: "Dashboard",
         link: "/",
         icon: <RxDashboard size={20} />,
@@ -41,16 +44,19 @@ export const Menu = [
         ]
     },
     {
+        id: 2,
         title: 'Calender',
         link: '/calender',
-        icon: <FaRegCalendarDays size={20} />
+        icon: <LuCalendarDays size={20} />
     },
     {
+        id: 3,
         title: 'Profile',
         link: '/profile',
         icon: <FiUser size={20} />
     },
     {
+        id: 4,
         title: "Task",
         link: "/task",
         icon: <FaList size={20} />,
@@ -63,13 +69,13 @@ export const Menu = [
                 title: 'Kanban',
                 link: "/tasks/task-kanban"
             },
-
         ]
     },
     {
+        id: 5,
         title: "Forms",
         link: "/form",
-        icon: <FaList size={20} />,
+        icon: <FaWpforms size={20} />,
         subItems: [
             {
                 title: 'Form Elements',
@@ -91,6 +97,7 @@ export const Menu = [
         ]
     },
     {
+        id: 6,
         title: "Tables",
         link: "/table",
         icon: <BsTable size={18} />,
@@ -106,6 +113,7 @@ export const Menu = [
         ]
     },
     {
+        id: 7,
         title: "Pages",
         link: "/page",
         icon: <RiPagesLine size={22} />,
@@ -171,6 +179,7 @@ export const Support = [
 
 export const Others = [
     {
+        id: 11,
         title: 'Chart',
         link: '/chart',
         icon: <AiOutlinePieChart size={22} />,
@@ -186,6 +195,7 @@ export const Others = [
         ]
     },
     {
+        id: 12,
         title: 'UI Elements',
         link: '/ui-element',
         icon: <AiOutlinePieChart size={22} />,
@@ -201,6 +211,7 @@ export const Others = [
         ]
     },
     {
+        id: 13,
         title: 'Authentication',
         link: '/auth',
         icon: <HiMiniArrowRightEndOnRectangle size={22} />,
