@@ -7,7 +7,7 @@ const ChatCard = ({ c }) => {
         <Link href={'/'} className='flex items-center gap-5 px-7 py-3 hover:bg-gray-300'>
 
             <div className='relative h-18 w-18 rounded-full'>
-                <Image src={c.pp} alt="profile" width={60} height={60} loading='lazy' />
+                <Image src={c.pp} alt="profile" width={65} height={65} loading='lazy' />
 
                 {c.status === 'online'
                     ? (

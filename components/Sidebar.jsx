@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import { Menu, Others, Support } from '@/constants/constants'
 
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
-import { HiMiniArrowLeft } from "react-icons/hi2";
+import { FaArrowLeft } from "react-icons/fa6";
 import { useSidebar } from '@/context/SidebarContext'
 
 export const Sidebar = () => {
@@ -49,7 +49,12 @@ export const Sidebar = () => {
                     />
                 </Link>
 
-                <HiMiniArrowLeft className='absolute right-6 top-1/2 -translate-y-1/2 lg:hidden  cursor-pointer' size={35} color='#64758a' onClick={toggleSidebar} />
+                <button
+                    className='absolute right-6 top-1/2 -translate-y-1/2 lg:hidden  cursor-pointer'
+                    onClick={toggleSidebar}
+                >
+                    <FaArrowLeft size={25} color='#64758a' />
+                </button>
             </div>
 
             <div className='flex flex-col mt-6 p-6 overflow-scroll no-scrollbar'>

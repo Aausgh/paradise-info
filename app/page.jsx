@@ -1,15 +1,15 @@
 
-
 import Card from '@/components/Card'
+
 import ChatCard from '@/components/ChatCard';
 import Table from '@/components/Table';
-import { Chats, Info, TableInfo } from '@/constants/constants'
+import { Chats, Info } from '@/constants/constants'
 import React from 'react'
 import { FaAngleDown } from 'react-icons/fa6';
 
 const Home = () => {
     return (
-        <div className='w-screen lg:max-w-screen-2xl  mx-auto p-4 md:p-6 xl:p-10'>
+        <div className='w-screen lg:max-w-screen-2xl mx-auto p-4 md:p-6 xl:p-10'>
 
             <div className=' grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:gap-8'>
 
@@ -19,8 +19,7 @@ const Home = () => {
 
             </div>
 
-            <div className='mt-4 grid grid-cols-12 gap-4'>
-
+            <div className='mt-8 grid grid-cols-12 gap-4 md:gap-6 xl:gap-8'>
                 {/* Revenue & Sales */}
                 <div className='col-span-12 xl:col-span-8 rounded-md bg-white px-5 py-7 shadow-md'>
 
@@ -36,7 +35,7 @@ const Home = () => {
                                         Total Revenue
                                     </p>
 
-                                    <p class="text-sm font-medium">
+                                    <p className="text-sm font-medium">
                                         12.04.2022 - 12.05.2022
                                     </p>
                                 </div>
@@ -51,7 +50,7 @@ const Home = () => {
                                         Total Sales
                                     </p>
 
-                                    <p class="text-sm font-medium">
+                                    <p className="text-sm font-medium">
                                         12.04.2022 - 12.05.2022
                                     </p>
                                 </div>
@@ -66,7 +65,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
 
 
@@ -77,7 +75,7 @@ const Home = () => {
                             Profit this week
                         </h1>
 
-                        <div class="relative z-20 inline-block text-gray-600">
+                        <div className="relative z-20 inline-block text-gray-600">
                             <select name="#" id="#" className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8  text-sm font-medium outline-none">
                                 <option value="">
                                     This Week
@@ -92,6 +90,8 @@ const Home = () => {
                                 <FaAngleDown />
                             </span>
                         </div>
+
+
                     </div>
                 </div>
 
@@ -140,7 +140,7 @@ const Home = () => {
 
 
                 {/* Top Channels */}
-                <div className='col-span-12 xl:col-span-8 rounded-md bg-white px-5 py-7 shadow-md'>
+                <div className='col-span-12 xl:col-span-8 rounded-md bg-white p-6 shadow-md'>
 
                     <h1 className='mb-6 text-xl font-semibold text-black'>
                         Top Channels
@@ -151,12 +151,12 @@ const Home = () => {
 
 
                 {/* Chats */}
-                <div className='col-span-12 xl:col-span-4 rounded-md bg-white px-5 py-7 shadow-md'>
-                    <h4 className="mb-6 px-7 text-xl font-semibold text-black ">
+                <div className='col-span-12 xl:col-span-4 rounded-md bg-white px-2 py-7 shadow-md'>
+                    <h4 className="mb-6 px-5 text-xl font-semibold text-black ">
                         Chats
                     </h4>
 
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col gap-3'>
                         {Chats.map((c) => (
                             <ChatCard key={c.id} c={c} />
                         ))}

@@ -11,13 +11,13 @@ import { FiDownload } from "react-icons/fi";
 import { LiaFileInvoiceSolid } from "react-icons/lia";
 
 import { AiOutlinePieChart } from "react-icons/ai";
-import { HiMiniArrowRightEndOnRectangle } from "react-icons/hi2";
+import { FaArrowRightToBracket } from "react-icons/fa6";
 
 import { IoEyeOutline } from "react-icons/io5";
 import { BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
 import { BsCart2 } from "react-icons/bs";
 import { CgShoppingBag } from "react-icons/cg";
-import { HiOutlineUsers } from "react-icons/hi2";
+import { LuUsers } from "react-icons/lu";
 
 import { FcGoogle } from "react-icons/fc";
 import { AiFillTwitterCircle } from "react-icons/ai";
@@ -224,7 +224,7 @@ export const Others = [
         id: 13,
         title: 'Authentication',
         link: '/auth',
-        icon: <HiMiniArrowRightEndOnRectangle size={22} />,
+        icon: <FaArrowRightToBracket size={22} />,
         subItems: [
             {
                 title: 'Basic Chart',
@@ -265,7 +265,7 @@ export const Info = [
     },
     {
         id: 4,
-        icon: <HiOutlineUsers size={22} />,
+        icon: <LuUsers size={22} />,
         title: 'Total Users',
         value: '3.456',
         percent: 0.95,
@@ -276,7 +276,7 @@ export const Info = [
 export const TableInfo = [
     {
         id: 1,
-        icon: <FcGoogle size={40} />,
+        icon: <FcGoogle size={50} />,
         source: 'Google',
         visitors: 3.5,
         revenues: '5,768',
@@ -285,7 +285,7 @@ export const TableInfo = [
     },
     {
         id: 2,
-        icon: <AiFillTwitterCircle color="#2a97f0" size={40} />,
+        icon: <AiFillTwitterCircle color="#2a97f0" size={50} />,
         source: 'Twitter',
         visitors: 2.2,
         revenues: '4,635',
@@ -294,7 +294,7 @@ export const TableInfo = [
     },
     {
         id: 3,
-        icon: <FaGithub size={40} />,
+        icon: <FaGithub size={50} />,
         source: 'Github',
         visitors: 2.1,
         revenues: '4,290',
@@ -303,7 +303,7 @@ export const TableInfo = [
     },
     {
         id: 4,
-        icon: <TiSocialVimeoCircular size={40} color="#4cc1fe" />,
+        icon: <TiSocialVimeoCircular size={50} color="#4cc1fe" />,
         source: 'Vimeo',
         visitors: 1.5,
         revenues: '3,580',
@@ -312,7 +312,7 @@ export const TableInfo = [
     },
     {
         id: 5,
-        icon: <FaFacebook size={40} color="#3063c9" />,
+        icon: <FaFacebook size={50} color="#3063c9" />,
         source: 'Facebook',
         visitors: 3.5,
         revenues: '6,768',

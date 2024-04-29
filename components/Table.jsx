@@ -5,7 +5,7 @@ const Table = () => {
     return (
         <table className='w-full'>
             <thead>
-                <tr className='bg-[#f7f9fc] text-lg uppercase grid grid-cols-5 text-center p-3 xl:p-5 text-[#738293]'>
+                <tr className='bg-[#f7f9fc] text-lg uppercase grid grid-cols-5 text-center p-3 text-[#738293]'>
                     <th className='font-medium '>Source</th>
                     <th className='font-medium '>Visitors</th>
                     <th className='font-medium '>Revenues</th>
@@ -15,8 +15,8 @@ const Table = () => {
             </thead>
             <tbody>
                 {TableInfo.map((i) => (
-                    <tr className='text-lg grid grid-cols-5 text-center p-2 xl:p-5 border-t' key={i.id}>
-                        <th className='font-light flex items-center gap-6'>
+                    <tr className='text-base grid grid-cols-5 text-center p-2 xl:p-5 border-t items-center' key={i.id}>
+                        <th className='font-light flex items-center gap-4'>
                             {i.icon}
                             {i.source}
                         </th>
