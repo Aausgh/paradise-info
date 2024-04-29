@@ -1,8 +1,9 @@
 
 
 import Card from '@/components/Card'
+import ChatCard from '@/components/ChatCard';
 import Table from '@/components/Table';
-import { Info, TableInfo } from '@/constants/constants'
+import { Chats, Info, TableInfo } from '@/constants/constants'
 import React from 'react'
 import { FaAngleDown } from 'react-icons/fa6';
 
@@ -146,6 +147,20 @@ const Home = () => {
                     </h1>
 
                     <Table />
+                </div>
+
+
+                {/* Chats */}
+                <div className='col-span-12 xl:col-span-4 rounded-md bg-white px-5 py-7 shadow-md'>
+                    <h4 className="mb-6 px-7 text-xl font-semibold text-black ">
+                        Chats
+                    </h4>
+
+                    <div className='flex flex-col'>
+                        {Chats.map((c) => (
+                            <ChatCard key={c.id} c={c} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

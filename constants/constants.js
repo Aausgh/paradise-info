@@ -320,3 +320,60 @@ export const TableInfo = [
         conversion: 4.2
     }
 ]
+
+export const Chats = [
+    {
+        id: 1,
+        pp: 'https://nextjs-demo.tailadmin.com/_next/image?url=%2Fimages%2Fuser%2Fuser-01.png&w=64&q=75',
+        name: 'Devid Heilo',
+        msg: 'How are you?',
+        time: 12,
+        status: 'online',
+        notification: 3
+    },
+    {
+        id: 2,
+        pp: 'https://nextjs-demo.tailadmin.com/_next/image?url=%2Fimages%2Fuser%2Fuser-02.png&w=64&q=75',
+        name: 'Henry Fisher',
+        msg: 'Waiting for you!',
+        time: 12,
+        status: 'offline',
+        notification: 0
+    },
+    {
+        id: 3,
+        pp: 'https://nextjs-demo.tailadmin.com/_next/image?url=%2Fimages%2Fuser%2Fuser-04.png&w=64&q=75',
+        name: 'Stella Johnson',
+        msg: 'See you later',
+        time: 19,
+        status: 'online',
+        notification: 0
+    },
+    {
+        id: 4,
+        pp: 'https://nextjs-demo.tailadmin.com/_next/image?url=%2Fimages%2Fuser%2Fuser-05.png&w=64&q=75',
+        name: 'Eleanor Pena',
+        msg: 'I am fine, thank you!',
+        time: 30,
+        status: 'away',
+        notification: 2
+    },
+    {
+        id: 5,
+        pp: 'https://nextjs-demo.tailadmin.com/_next/image?url=%2Fimages%2Fuser%2Fuser-03.png&w=64&q=75',
+        name: 'John Doe',
+        msg: 'Great',
+        time: 32,
+        status: 'offline',
+        notification: 0
+    },
+    {
+        id: 6,
+        pp: 'https://nextjs-demo.tailadmin.com/_next/image?url=%2Fimages%2Fuser%2Fuser-06.png&w=64&q=75',
+        name: 'Doris Brown',
+        msg: 'How are you?',
+        time: 32,
+        status: 'away',
+        notification: 3
+    }
+]
