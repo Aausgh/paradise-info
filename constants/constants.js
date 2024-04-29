@@ -2,7 +2,6 @@ import { RxDashboard } from "react-icons/rx";
 import { LuCalendarDays } from "react-icons/lu";
 import { FiUser } from "react-icons/fi";
 import { FaList } from "react-icons/fa";
-import { CiBoxList } from "react-icons/ci";
 import { BsTable } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
 import { FaWpforms } from "react-icons/fa";
@@ -13,6 +12,12 @@ import { LiaFileInvoiceSolid } from "react-icons/lia";
 
 import { AiOutlinePieChart } from "react-icons/ai";
 import { HiMiniArrowRightEndOnRectangle } from "react-icons/hi2";
+
+import { IoEyeOutline } from "react-icons/io5";
+import { BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
+import { BsCart2 } from "react-icons/bs";
+import { CgShoppingBag } from "react-icons/cg";
+import { HiOutlineUsers } from "react-icons/hi2";
 
 export const Menu = [
     {
@@ -100,7 +105,7 @@ export const Menu = [
         id: 6,
         title: "Tables",
         link: "/table",
-        icon: <BsTable size={18} />,
+        icon: <BsTable size={20} />,
         subItems: [
             {
                 title: 'Tables',
@@ -116,7 +121,7 @@ export const Menu = [
         id: 7,
         title: "Pages",
         link: "/page",
-        icon: <RiPagesLine size={22} />,
+        icon: <RiPagesLine size={20} />,
         subItems: [
             {
                 title: 'Settings',
@@ -226,4 +231,39 @@ export const Others = [
             }
         ]
     },
+]
+
+export const Info = [
+    {
+        id: 1,
+        icon: <IoEyeOutline size={22} />,
+        title: 'Total Views',
+        value: '$3.456K',
+        percent: 0.43,
+        pIcon: <BiUpArrowAlt size={20} />
+    },
+    {
+        id: 2,
+        icon: <BsCart2 size={22} />,
+        title: 'Total Profit',
+        value: '$45.2K',
+        percent: 4.35,
+        pIcon: <BiUpArrowAlt size={20} />
+    },
+    {
+        id: 3,
+        icon: <CgShoppingBag size={22} />,
+        title: 'Total Product',
+        value: '2.450',
+        percent: 2.59,
+        pIcon: <BiUpArrowAlt size={20} />
+    },
+    {
+        id: 4,
+        icon: <HiOutlineUsers size={22} />,
+        title: 'Total Users',
+        value: '3.456',
+        percent: 0.95,
+        pIcon: <BiDownArrowAlt size={20} />
+    }
 ]
