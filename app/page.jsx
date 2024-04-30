@@ -1,21 +1,42 @@
+"use client"
 
 import AnalyticsChart from '@/components/AnalyticsChart';
 import Card from '@/components/Card'
-
 import ChatCard from '@/components/ChatCard';
 import ProfitChart from '@/components/ProfitChart';
 import RevenueChart from '@/components/RevenueChart';
 import Table from '@/components/Table';
 import { Chats, Info } from '@/constants/constants'
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaAngleDown } from 'react-icons/fa6';
 import map from '@/public/map.svg'
+import Loader from '@/components/Loader';
 
 const Home = () => {
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="flex items-center justify-center h-screen">
+                <Loader />
+            </div>
+        );
+    }
+
     return (
         <div className='w-screen lg:max-w-screen-2xl mx-auto p-4 md:p-6 xl:p-10'>
 
+            {/* Info */}
             <div className=' grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:gap-8'>
 
                 {Info.map((i) => (

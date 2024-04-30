@@ -1,25 +1,18 @@
 "use client"
 
 import Image from 'next/image';
-import React, { useState } from 'react'
 import { LuMenu } from "react-icons/lu";
 import { LuSearch } from "react-icons/lu";
 import { TfiBell } from "react-icons/tfi";
 import { AiOutlineMessage } from "react-icons/ai";
-import { IoSunny } from "react-icons/io5";
-import { FaMoon } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa6";
 import { useSidebar } from '@/context/SidebarContext';
+import ThemeButton from './ThemeButton';
+
 
 const Navbar = () => {
 
     const { toggleSidebar } = useSidebar();
-    const [darkMode, setDarkMode] = useState(false)
-
-
-    const toggleDarkMode = () => {
-        setDarkMode(prevState => !prevState)
-    }
 
     return (
 
@@ -33,6 +26,7 @@ const Navbar = () => {
                     <Image src="https://nextjs-demo.tailadmin.com/images/logo/logo-icon.svg" width={35} height={50} alt="logo" loading='lazy' />
                 </div>
 
+                {/* Search */}
                 <form className='hidden md:flex items-center gap-4'>
                     <LuSearch size={20} />
                     <input type="text" placeholder='Type to search...' className='focus:outline-none' />
@@ -41,24 +35,9 @@ const Navbar = () => {
                 <div className="flex items-center gap-7">
 
                     <div className='flex items-center gap-4'>
-                        <label className='relative '>
-                            <div
-                                className={`${!darkMode ? 'bg-[#e3e8f1]' : 'bg-[#3c51e1]'} h-7 w-[58px] p-1 rounded-full cursor-pointer`}
-                                onClick={toggleDarkMode}
-                            />
-                            {!darkMode
-                                ? (
-                                    <span className='absolute top-1 left-1 bg-white rounded-full p-1 shadow-md cursor-pointer'>
-                                        <IoSunny size={12} onClick={toggleDarkMode} />
-                                    </span>
-                                )
-                                : (
-                                    <span className='absolute top-1 right-1 bg-white rounded-full p-1 shadow-md cursor-pointer'>
-                                        <FaMoon size={12} onClick={toggleDarkMode} />
-                                    </span>
-                                )
-                            }
-                        </label>
+
+                        {/* Dark Mode */}
+                        <ThemeButton />
 
                         <button className='border p-2 rounded-full bg-[#eff4fb]'>
                             <TfiBell size={18} />
@@ -69,6 +48,7 @@ const Navbar = () => {
                         </button>
                     </div>
 
+                    {/* Profile */}
                     <button className='flex items-center gap-4'>
 
                         <div className='hidden flex-col items-end lg:flex'>
@@ -86,14 +66,9 @@ const Navbar = () => {
 
                         <FaAngleUp className='rotate-180' />
                     </button>
-
                 </div>
-
             </div>
         </nav >
-
-
-
     )
 }
 

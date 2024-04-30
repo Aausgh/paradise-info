@@ -11,6 +11,7 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import { useSidebar } from '@/context/SidebarContext'
 
+
 export const Sidebar = () => {
 
     const { toggleSidebar, isSidebarOpen } = useSidebar();
@@ -59,6 +60,8 @@ export const Sidebar = () => {
 
             <div className='flex flex-col mt-6 p-6 overflow-scroll no-scrollbar'>
 
+
+                {/* Menu */}
                 <div>
                     <h1 className='text-base font-semibold text-sHeaderText mb-4'>
                         Menu
@@ -119,6 +122,8 @@ export const Sidebar = () => {
                     </ul>
                 </div>
 
+
+                {/* Support */}
                 <div>
                     <h1 className='text-base font-semibold text-sHeaderText mb-4'>
                         Support
@@ -127,23 +132,31 @@ export const Sidebar = () => {
                     <ul className='flex flex-col gap-2 mb-6'>
                         {Support.map((m, index) => (
                             <li key={index}>
-                                <Link href={m.link}>
+                                <Link href={m.link} className='flex justify-between items-center'>
                                     <div
                                         className={`
-                                                        relative flex items-center gap-2 px-4 py-2  font-medium text-sMainText hover:bg-sHeaderText/20 rounded-md duration-300 ease-in-out transition-all cursor-pointer
-                                                        ${isActive(m.link, m.title) ? 'bg-sHeaderText/20' : ''}
+                                                    relative flex items-center gap-2 px-4 py-2 font-medium text-sMainText hover:bg-sHeaderText/20 rounded-md duration-300 ease-in-out transition-all cursor-pointer
+                                                    ${isActive(m.link, m.title) ? 'bg-sHeaderText/20' : ''}
                                                     `}
                                         onClick={() => toggleMenu(index)}
                                     >
                                         {m.icon}
                                         <h1>{m.title}</h1>
                                     </div>
+
+                                    {m.title === 'Messages' && (
+                                        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-700">
+                                            <span className="text-sm font-medium text-white">5</span>
+                                        </div>
+                                    )}
                                 </Link>
                             </li>
                         ))}
                     </ul>
                 </div>
 
+
+                {/* Others */}
                 <div>
                     <h1 className='text-base font-semibold text-sHeaderText mb-4'>
                         Others
