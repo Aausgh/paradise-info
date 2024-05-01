@@ -4,7 +4,7 @@ import React from 'react'
 
 const ChatCard = ({ c }) => {
     return (
-        <Link href={'/'} className='flex items-center gap-5 px-7 py-3 hover:bg-gray-300'>
+        <Link href={'/'} className='flex items-center gap-5 px-7 py-3 hover:bg-gray-100 dark:hover:bg-gray-700'>
 
             <div className='relative h-18 w-18 rounded-full'>
                 <Image src={c.pp} alt="profile" width={65} height={65} loading='lazy' />
@@ -24,9 +24,9 @@ const ChatCard = ({ c }) => {
 
             <div className='flex items-center justify-between w-full'>
                 <div className='flex flex-col'>
-                    <h5 className='font-medium text-black'>{c.name}</h5>
+                    <h5 className='font-medium text-black dark:text-white'>{c.name}</h5>
                     <p>
-                        <span className='text-sm text-black'>{c.msg}</span>
+                        <span className='text-sm text-black dark:text-white'>{c.msg}</span>
                         <span className='text-xs text-gray-500'> . {c.time} min</span>
                     </p>
                 </div>

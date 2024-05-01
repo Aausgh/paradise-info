@@ -16,10 +16,10 @@ const Navbar = () => {
 
     return (
 
-        <nav className='sticky top-0 z-50 flex shadow-md bg-white '>
+        <nav className='sticky top-0 z-50 flex shadow-md bg-white dark:bg-[#25303e]'>
             <div className='flex flex-grow items-center justify-between p-4 shadow-sm md:px-8'>
                 <div className='flex items-center gap-4 lg:hidden'>
-                    <button className='border p-1 rounded-md shadow-sm' onClick={toggleSidebar}>
+                    <button className='border p-1 rounded-md shadow-sm dark:border-white/20' onClick={toggleSidebar}>
                         <LuMenu size={25} />
                     </button>
 
@@ -29,7 +29,7 @@ const Navbar = () => {
                 {/* Search */}
                 <form className='hidden md:flex items-center gap-4'>
                     <LuSearch size={20} />
-                    <input type="text" placeholder='Type to search...' className='focus:outline-none' />
+                    <input type="text" placeholder='Type to search...' className='focus:outline-none bg-transparent' />
                 </form>
 
                 <div className="flex items-center gap-7">
@@ -39,11 +39,11 @@ const Navbar = () => {
                         {/* Dark Mode */}
                         <ThemeButton />
 
-                        <button className='border p-2 rounded-full bg-[#eff4fb]'>
+                        <button className=' p-2 rounded-full bg-[#eff4fb] dark:bg-[#303c4a]'>
                             <TfiBell size={18} />
                         </button>
 
-                        <button className='border p-2 rounded-full bg-[#eff4fb]'>
+                        <button className=' p-2 rounded-full bg-[#eff4fb] dark:bg-[#303c4a]'>
                             <AiOutlineMessage size={18} />
                         </button>
                     </div>

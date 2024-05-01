@@ -73,7 +73,8 @@ const Revenue = [
     }
 ]
 
-const RevenueChart = () => {
+const RevenueChart = ({ theme }) => {
+    const gridColor = theme === "dark" ? "#2a3744" : "#eff1f7";
     return (
         <ResponsiveContainer width="100%" height="100%">
             <AreaChart width={500} height={400} data={Revenue}>
@@ -91,23 +92,23 @@ const RevenueChart = () => {
                     tickSize={0}
                     tickMargin={20}
                 />
-                <CartesianGrid strokeDasharray="1" />
+                <CartesianGrid stroke={gridColor} />
                 <Tooltip content={CustomTooltip} />
                 <Area
                     dataKey="product2"
                     stroke="#80caee"
-                    strokeWidth={3}
+                    strokeWidth={2}
                     fill="#cae9f9"
-                    dot={{ r: 4 }}
-                    activeDot={{ r: 10 }}
+                    dot={<CustomDot color="#80caee" />}
+                    activeDot={<CustomActiveDot color="#80caee" />}
                 />
                 <Area
                     dataKey="product1"
                     stroke="#5e79e4"
-                    strokeWidth={3}
+                    strokeWidth={2}
                     fill="#b2caf3"
-                    dot={{ r: 4 }}
-                    activeDot={{ r: 10 }}
+                    dot={<CustomDot color="#5e79e4" />}
+                    activeDot={<CustomActiveDot color="#5e79e4" />}
                 />
 
             </AreaChart>
@@ -118,8 +119,8 @@ const RevenueChart = () => {
 const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
         return (
-            <div className="bg-white rounded-lg">
-                <div className="bg-gray-200 py-3 px-1">
+            <div className="bg-white dark:bg-[#25303e] rounded-lg">
+                <div className="bg-gray-200 dark:bg-[#303c4a] py-3 px-1 ">
                     <p className="text-xs font-medium">{label}</p>
                 </div>
 
@@ -127,7 +128,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
                     <span className="block h-2.5 w-2.5 rounded-full bg-[#3c51e1]"></span>
 
-                    <p className="text-xs text-black font-light">
+                    <p className="text-xs text-black dark:text-white font-light">
                         Product One :
                         <span className="">{payload[0].value}</span>
                     </p>
@@ -136,7 +137,7 @@ const CustomTooltip = ({ active, payload, label }) => {
                 <div className="flex gap-2 items-center py-3 px-2">
                     <span className="block h-2.5 w-2.5 rounded-full bg-[#80caee]"></span>
 
-                    <p className="text-xs text-black font-light">
+                    <p className="text-xs text-black dark:text-white font-light">
                         Product Two :
                         <span className="">{payload[1].value}</span>
                     </p>
@@ -145,5 +146,26 @@ const CustomTooltip = ({ active, payload, label }) => {
         )
     }
 }
+
+const CustomDot = ({ cx, cy, color }) => {
+    return (
+        <g>
+            <circle cx={cx} cy={cy} r={5} fill={color} strokeWidth={3} />
+            <circle cx={cx} cy={cy} r={2} fill="#ffffff" />
+        </g>
+    );
+};
+
+const CustomActiveDot = ({ cx, cy, color }) => {
+    return (
+        <g>
+
+            <circle cx={cx} cy={cy} r={10} fill={color} strokeWidth={0} />
+
+            <circle cx={cx} cy={cy} r={7} fill="#ffffff" />
+        </g>
+    );
+};
+
 
 export default RevenueChart

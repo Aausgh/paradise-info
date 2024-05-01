@@ -3,6 +3,7 @@ import "./globals.css";
 import { Sidebar } from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import { SidebarProvider } from "@/context/SidebarContext";
+import { ThemeProvider } from "next-themes";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,14 +17,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} flex `}>
-        <SidebarProvider>
-          <Sidebar />
+        <ThemeProvider attribute="class">
+          <SidebarProvider>
+            <Sidebar />
 
-          <div className="flex flex-col lg:w-[calc(100%-18rem)] bg-[#f0f4f9] w-screen">
-            <Navbar />
-            {children}
-          </div>
-        </SidebarProvider>
+            <div className="flex flex-col lg:w-[calc(100%-18rem)] bg-[#f0f4f9] w-screen dark:bg-[#1b222d]">
+              <Navbar />
+              {children}
+            </div>
+          </SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

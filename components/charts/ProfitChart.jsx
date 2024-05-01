@@ -49,7 +49,8 @@ const Revenue = [
 
 ]
 
-const ProfitChart = () => {
+const ProfitChart = ({ theme }) => {
+    const gridColor = theme === "dark" ? "#2a3744" : "#eff1f7";
     return (
         <ResponsiveContainer width="100%" height="100%">
             <BarChart width={500} height={400} data={Revenue}>
@@ -68,7 +69,7 @@ const ProfitChart = () => {
                     axisLine={false}
 
                 />
-                <CartesianGrid vertical={false} />
+                <CartesianGrid vertical={false} stroke={gridColor} />
                 <Tooltip content={CustomTooltip} />
 
                 <Bar
@@ -81,6 +82,7 @@ const ProfitChart = () => {
                     dataKey="revenue"
                     fill="#81cbee"
                     stackId='1'
+                    barSize={"3%"}
                 />
 
             </BarChart>
@@ -91,8 +93,8 @@ const ProfitChart = () => {
 const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
         return (
-            <div className="bg-white rounded-lg">
-                <div className="bg-gray-200 py-3 px-1">
+            <div className="bg-white dark:bg-[#25303e] rounded-lg w-28">
+                <div className="bg-gray-200 dark:bg-[#303c4a] py-3 px-1">
                     <p className="text-xs font-medium">{label}</p>
                 </div>
 
@@ -100,7 +102,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
                     <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-[#80caee]"></span>
 
-                    <p className="text-xs text-black font-light">
+                    <p className="text-xs text-black dark:text-white font-light">
                         Revenue :
                         <span className="">{payload[1].value}</span>
                     </p>
@@ -110,7 +112,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
                     <span className="block h-2.5 w-2.5 rounded-full bg-[#3c51e1]"></span>
 
-                    <p className="text-xs text-black font-light">
+                    <p className="text-xs text-black dark:text-white font-light">
                         Sales :
                         <span className="">{payload[0].value}</span>
                     </p>
