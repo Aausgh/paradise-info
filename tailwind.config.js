@@ -11,6 +11,8 @@ module.exports = {
       colors: {
         'sHeaderText': '#8a98ae',
         'sMainText': '#d9e4ee',
+        'darkBg': '#1b222d',
+        'darkBox': '#25303e'
       }
     }
   },

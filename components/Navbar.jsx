@@ -51,7 +51,7 @@ const Navbar = () => {
                     {/* Profile */}
                     <button className='flex items-center gap-4'>
 
-                        <div className='hidden flex-col items-end lg:flex'>
+                        <div className='hidden flex-col items-end xl:flex'>
                             <h1 className='text-sm '>Thomas Anree</h1>
                             <h4 className='text-xs text-gray-400'>UX Designer</h4>
                         </div>
