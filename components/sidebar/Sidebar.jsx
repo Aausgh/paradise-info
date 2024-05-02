@@ -5,11 +5,11 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-import { Menu, Others, Support } from '@/constants/constants'
 
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import { useSidebar } from '@/context/SidebarContext'
+import { Menu, Support, Others } from './data'
 
 
 export const Sidebar = () => {
@@ -34,7 +34,7 @@ export const Sidebar = () => {
     return (
 
         <aside
-            className={`absolute left-0 top-0 z-[99] h-screen w-72 flex flex-col bg-[#1d2534] lg:sticky transition-all duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}
+            className={`fixed left-0 top-0 z-[99] h-screen w-[18rem] flex flex-col bg-[#1d2534] dark:bg-darkBox lg:sticky transition-all duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}
         >
 
             <div className='relative'>

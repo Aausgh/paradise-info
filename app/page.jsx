@@ -11,7 +11,7 @@ import ChatCard from '@/components/ChatCard';
 import Table from '@/components/Table';
 import Loader from '@/components/Loader';
 
-import { Chats, Info } from '@/constants/constants'
+import { Chats, Info } from '@/app/data'
 
 import { FaAngleDown } from 'react-icons/fa6';
 import map from '@/public/map.svg'
@@ -41,7 +41,7 @@ const Home = () => {
     }
 
     return (
-        <div className='max-w-screen-2xl mx-auto p-4 md:p-6 xl:p-10'>
+        <>
 
             {/* Info */}
             <div className=' grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:gap-8'>
@@ -270,7 +270,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

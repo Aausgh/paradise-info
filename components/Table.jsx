@@ -1,4 +1,4 @@
-import { TableInfo } from '@/constants/constants'
+import { TableInfo } from '@/app/data'
 import React from 'react'
 
 const Table = () => {
