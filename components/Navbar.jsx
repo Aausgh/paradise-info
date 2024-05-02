@@ -23,13 +23,13 @@ const Navbar = () => {
                         <LuMenu size={25} />
                     </button>
 
-                    <Image src="https://nextjs-demo.tailadmin.com/images/logo/logo-icon.svg" width={35} height={50} alt="logo" loading='lazy' />
+                    <Image src="https://nextjs-demo.tailadmin.com/images/logo/logo-icon.svg" width={35} height={50} alt="logo" loading='lazy' className='hidden md:block' />
                 </div>
 
                 {/* Search */}
                 <form className='hidden md:flex items-center gap-4'>
                     <LuSearch size={20} />
-                    <input type="text" placeholder='Type to search...' className='focus:outline-none bg-transparent' />
+                    <input type="text" placeholder='Type to search...' className='focus:outline-none bg-transparent w-96' />
                 </form>
 
                 <div className="flex items-center gap-7">

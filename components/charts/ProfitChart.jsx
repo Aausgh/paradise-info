@@ -76,13 +76,13 @@ const ProfitChart = ({ theme }) => {
                     dataKey="sales"
                     fill="#3c51e1"
                     stackId={'1'}
-                    barSize={"3%"}
+                    barSize={"4%"}
                 />
                 <Bar
                     dataKey="revenue"
                     fill="#81cbee"
                     stackId='1'
-                    barSize={"3%"}
+                    barSize={"4%"}
                 />
 
             </BarChart>

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react'
 
-import AnalyticsChart from '@/components/charts/AnalyticsChart';
+import AnalyticsChart from '@/components/charts/AnalyticsPieChart';
 import ProfitChart from '@/components/charts/ProfitChart';
 import RevenueChart from '@/components/charts/RevenueChart';
 import Card from '@/components/Card'
@@ -57,7 +57,7 @@ const Home = () => {
                 {/* Revenue & Sales */}
                 <div className='col-span-12 xl:col-span-8 rounded-md bg-white dark:bg-[#25303e] px-5 py-7 shadow-md'>
 
-                    <div className='flex flex-wrap items-start justify-between '>
+                    <div className='flex flex-wrap items-start justify-between gap-y-4'>
                         <div className='flex flex-col flex-wrap md:flex-row gap-4'>
 
                             <div className='flex min-w-48'>
@@ -110,7 +110,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className=' mt-6 w-[96%] h-64 lg:h-80'>
+                    <div className=' mt-8 w-[100%] h-64 lg:h-80'>
                         <RevenueChart theme={theme} />
                     </div>
                 </div>
