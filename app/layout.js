@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             <Sidebar />
             <div className="flex flex-col w-full lg:w-[calc(100%-18rem)] ">
               <Navbar />
-              <div className='max-w-screen-2xl mx-auto p-4 md:p-6 xl:p-10'>
+              <div className=' p-4 md:p-6 xl:py-10 xl:px-20'>
                 {children}
               </div>
             </div>
